@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+
+
+<head>
+  <title>PDS table</title>
+  <link href='data/Config.css' rel='stylesheet' type='text/css' media='all'>
+  </link>
+  <script src='https://code.jquery.com/jquery-3.3.1.slim.min.js' integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo' crossorigin='anonymous'></script>
+  <script src='data/dataSource.js'></script>
+  <script src='source/populateTableFromJSFile.js'></script>
+</head>
+
+<body>
+  <article>
+    <div class="grid-wrapper">
+      <article>
+        <div class="grid-container-vaults">
+          <div class="mainTitle">Main Vaults</div>
+          <div class="cell-items" id="subMenu1">vault 1</div>
+          <div class="cell-items" id="subMenu2">vault 2</div>
+          <div class="cell-items" id="subMenu3">vault 3</div>
+          <div class="cell-items" id="subMenu4">vault 4</div>
+          <div class="cell-items">V11A</div>
+          <div class="cell-items">V12A</div>
+          <div class="cell-items">V13A</div>
+          <div class="cell-items">V14A</div>
+          <div class="cell-items">V21B</div>
+        </div>
+      </article>
+      <article>
+        <div class="grid-container-nested-units">
+          <article>
+            <div class="grid-container-units" id="station1_pos">
+                <div class="unit_Title" id="subTitlePos">Unit substations 1</div>
+                <div class="cell-items">sub1</div>
+                <div class="cell-items">sub2</div>
+                <div class="cell-items">sub3</div>
+                <div class="cell-items">sub4</div>
+                <div class="cell-items">sub5</div>
+                <div class="cell-items">sub6</div>
+                <div class="cell-items">sub7</div>
+            </div>
+          </article>
+          <article>
+            <div class="grid-container-units" id="station2_pos">
+                <div class="unit_Title" id="subTitlePos">Unit substations 2</div>
+                <div class="cell-items">sub1</div>
+                <div class="cell-items">sub2</div>
+                <div class="cell-items">sub3</div>
+                <div class="cell-items">sub4</div>
+                <div class="cell-items">sub5</div>
+                <div class="cell-items">sub6</div>
+                <div class="cell-items">sub7</div>
+                <div class="cell-items">sub8</div>
+            </div>
+          </article>
+        </div>
+
+
+      </article>
+    </div>
+  </article>
+</body>
+
+<script>
+  //  $("#unitTitles" + "").append('<th class="text-center ' + headers.class + '">' + headers.title + '</th>');
+  //  console.log("ID: " + "#unitTitles" + "");
+</script>
+
+</html>

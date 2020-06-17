@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PDS table</title>
+  <link href='data/Config.css' rel='stylesheet' type='text/css' media='all'>
+  </link>
+  <script src='https://code.jquery.com/jquery-3.3.1.slim.min.js' integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo' crossorigin='anonymous'></script>
+  <script src='data/dataSource.js'></script>
+  <script src='source/populateTableFromJSFile.js'></script>
+</head>
+
+<body>
+  <header>
+    <div id="GridHeader0"></div>    <!-- banner -->
+    <div id="GridHeader1"></div>    <!-- webpage title -->
+  </header>
+
+  <article>
+    <div><button type="submit" id="refresh" onClick="window.location.reload()">Refresh page</button></div>
+    <div class="grid-wrapper">
+      <article>
+        <div class="grid-container-vaults">
+          <div class="mainTitle" id="GridHeader2"></div>  <!-- Unit Sub -->
+          <div class="mainTitle" id="GridHeader3"></div>  <!-- PDS -->
+          <div class="mainTitle" id="GridHeader5"></div>  <!-- Alt/3rd -->
+          <div class="mainTitle" id="GridHeader4"></div>  <!-- Tied -->
+          <div class="cell-items" id="content0"></div>    <!-- Unit Sub data-->
+          <div class="cell-items" id="content1"></div>    <!-- PDS data -->
+          <div class="cell-items" id="content2"></div>    <!-- Alt/3rd data -->
+          <div class="cell-items" id="content3"></div>    <!-- Tied data -->
+        </div>
+      </article>
+      <article>
+        <div class="grid-container-nested-units">
+          <article>
+            <div class="grid-container-units" id="station1_position">
+                <div class="unit_Title" id="GridHeader6"></div>
+                <!-- not tag for content needed
+                      the content is being listed and does not need to be placed
+                    in any paticular order. As long as id like "station1_position" which
+                  points to a grid-area. Then the content will be placed first come first -->
+            </div>
+          </article>
+          <article>
+            <div class="grid-container-units" id="station2_position">
+                <div class="unit_Title" id="GridHeader7"></div>
+                <!-- not tag for content needed
+                      the content is being listed and does not need to be placed
+                    in any paticular order. As long as id like "station1_position" which
+                  points to a grid-area. Then the content will be placed first come first -->
+            </div>
+          </article>
+        </div>
+      </article>
+    </div>
+  </article>
+</body>
+
+<script></script>
+
+</html>

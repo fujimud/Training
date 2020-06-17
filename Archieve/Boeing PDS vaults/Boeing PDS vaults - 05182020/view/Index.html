@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PDS table</title>
+  <link href='../data-model/Config.css' rel='stylesheet' type='text/css' media='all'>
+  </link>
+  <script src='https://code.jquery.com/jquery-3.3.1.slim.min.js'
+    integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo' crossorigin='anonymous'>
+  </script>
+  <script src='../data-model/dataSource.js'></script>
+  <script src='../populateTableFromJSFile.js'></script>
+</head>
+
+<body>
+  <header>
+    <div id="GridHeader0"></div> <!-- banner -->
+    <div id="GridHeader1"></div> <!-- webpage title -->
+  </header>
+
+  <button id='refresh' type="submit" onClick="window.location.reload()">Refresh page</button>
+  <button id='openModal' type='button' onClick='openModal()'>Add new feeds/vaults</button>
+
+  <div class="grid-wrapper">
+
+    <article>
+      <div class="grid-container-vaults">
+        <label class="mainTitle" id="GridHeader2"></label> <!-- Unit Sub -->
+        <label class="mainTitle" id="GridHeader3"></label> <!-- PDS -->
+        <label class="mainTitle" id="GridHeader5"></label> <!-- Alt/3rd -->
+        <label class="mainTitle" id="GridHeader4"></label> <!-- Tied -->
+        <label class="cell-items" id="content0"></label> <!-- Unit Sub data-->
+        <label class="cell-items" id="content1"></label> <!-- PDS data -->
+        <label class="cell-items" id="content2"></label> <!-- Alt/3rd data -->
+        <label class="cell-items" id="content3"></label> <!-- Tied data -->
+      </div>
+    </article>
+    <article>
+      <div class="grid-container-substations">
+          <div class="grid-substation-units" id="station1_position">
+            <label class="unit_Title" id="GridHeader6"></label>
+            <!-- not tag for content needed
+                      the content is being listed and does not need to be placed
+                    in any paticular order. As long as id like "station1_position" which
+                  points to a grid-area. Then the content will be placed first come first -->
+          </div>
+
+          <div class="grid-substation-units" id="station2_position">
+            <label class="unit_Title" id="GridHeader7"></label>
+            <!-- not tag for content needed
+                      the content is being listed and does not need to be placed
+                    in any paticular order. As long as id like "station1_position" which
+                  points to a grid-area. Then the content will be placed first come first -->
+          </div>
+
+          <div id='addModal' class='modal' style='display: none;'>
+            <div class='modal-content'>
+              <span class='close'>&times;</span>
+              <header>
+                <H1>PDS add new content</H1>
+              </header>
+
+              <body>
+                <div>                  
+                  <form>
+                    <div id='feedName'>
+                      <label for="unitName">Unit Name: </label>
+                      <input type="text" id='unitName' name='unitName'
+                        placeholder='Enter name' required>
+                    </div>
+                    <div id='tableOptions'>
+                      <b>Table:</b> Select a table
+                      <div>
+                        <label for="unitSub">Unit Sub</label>
+                        <input type='radio' name='tableSelect' id='unitSub' value='unit'></input>
+                      </div>
+                      <div>
+                        <label for='sub1'> Substion 1</label>
+                        <input type='radio' name='tableSelect' id='sub1' value='sub1'></input>
+                      </div>
+                      <div>
+                        <label for='sub2'> Substion 2</label>
+                        <input type='radio' name='tableSelect' id='sub2' value='sub2'></input>
+                      </div>
+                    </div>
+                    <div id='statusOptions'>
+                      <b>Status</b>
+                      <div>
+                        <label for="activeStatus">active</label>
+                        <input type="radio" name='feedStatus' id='activeStatus' value='active' checked></input>
+                      </div>
+                      <div>
+                        <label for="sleepStatus">sleep</label>
+                        <input type="radio" name='feedStatus' id='sleepStatus' value='sleep'></input>
+                      </div>
+                    </div>
+                    <div id='typeOptions'>
+                      <b>Unit Type</b>
+                      <div>
+                        <label for='vault'>Vault</label>
+                        <input type='radio' name='unitType2' id='vault' value='vault' onchange="vaultOptions()"></input>
+                      </div>
+                      <div>
+                        <label for='feed'>Feed</label>
+                        <input type='radio' name='unitType2' id='feed' value='feed'
+                          onchange="feedOptions('feed')" checked></input>
+                      </div>
+                    </div>
+                    <div id='vaultOptions'></div>
+                    <button id='saveFeed' type="button" onclick=saveNewInformation()>Save</button>
+                    <button id='cancelAddOptions' type="button" onclick=cancelModalAction()>Cancel</button>
+                    <!-- <a href='/view/index.html'>Cancel</a> -->
+                  </form>
+                </div>
+              </body>
+            </div>
+          </div>
+
+      </div>
+    </article>
+  </div>
+</body>
+</html>

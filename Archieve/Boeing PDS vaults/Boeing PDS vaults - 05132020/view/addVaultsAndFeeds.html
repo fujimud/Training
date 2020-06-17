@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='../data-model/Config.css' rel='stylesheet' type='text/css' media='all'>
+    <script src='../addVaultsAndFeeds.js'></script>
+    <title>add new content</title>
+</head>
+
+<body>
+
+
+    <header>
+        <H1>PDS add new content</H1>
+    </header>
+
+    <body>
+        <div>
+            <a href='/view/index.html'>add new content</a>
+            <form>
+                <div>
+                    <label for="unitName">Unit Name: </label>
+                    <input type="text" id='unitName' name= 'unitName' placeholder='Enter either the vault or feed name'>
+                </div>
+                <div>
+                    <b>Table</b>
+                    Select the table the information is to appear in
+                    <div>
+                        <label for="unitStation">Unit Sub</label>
+                        <input type='radio' name='tableSelect' id='unitSub' value='unit'></input>
+                    </div> 
+                    <div>
+                        <label for='sub1'> Substion 1</label>
+                        <input type='radio' name='tableSelect' id='sub1' value='sub1'></input>
+                    </div> 
+                    <div>
+                        <label for='sub2'> Substion 2</label>
+                        <input type='radio' name='tableSelect' id='sub2' value='sub2'></input>
+                    </div>
+                </div>
+                <div>
+                    <b>Status</b>
+                    <div>
+                        <label for="activeStatus">active</label>
+                        <input type="radio" name='activityStatus' id='activeStatus' value='active' checked></input>
+                    </div>
+                    <div>
+                        <label for="sleepStatus">sleep</label>
+                        <input type="radio" name='sleepStatus' id='sleepStatus' value='sleep'></input>
+                    </div>
+                </div>
+                <div>
+                  <b>Unit Type 2</b>
+                    <div>
+                        <label for='vault'>Vault</label>
+                        <input type='radio' name='unitType2' id='vault' value='vault' onchange="vaultOptions()"></input>
+                    </div>
+                    <div>
+                        <label for='feed'>Feed</label>
+                        <input type='radio' name='unitType2' id='feed' value='feed' onchange="feedOptions('feed')"></input>
+                    </div>
+                </div>
+                <div id='unitTypeOption1'></div>
+                <button type="button" value="Download NOW" onclick= "window.location='file.txt'">Add</button>
+            </form>
+
+        </div>
+    </body>
+
+</body>
+
+</html>

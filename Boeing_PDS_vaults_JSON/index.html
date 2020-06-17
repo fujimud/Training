@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <link rel="stylesheet" href="lib/css/Config.css">
+    <script src='https://code.jquery.com/jquery-latest.min.js'></script>
+    <script src='src/main.js'></script>
+    <title>PDS - Renton WA</title>
+</head>
+<body>
+    <header>
+        <ul>
+            <li><a class='active' href='#home'>Home</a></li>
+            <li><a href='#edit'>Edit</a></li>
+        </ul>
+        <div id='GridHeader0'></div>
+        <h1 id='GridHeader1'></h1>
+    </header>    
+        
+    <div class="grid-wrapper">
+        <section>
+            <div class="grid-container-vaults">
+                <label class="mainTitle" id="GridHeader2"></label> <!-- Unit Sub -->
+                <label class="mainTitle" id="GridHeader3"></label> <!-- PDS -->
+                <label class="mainTitle" id="GridHeader4"></label> <!-- Alt/3rd -->
+                <label class="tiedTitle mainTitle" id="GridHeader5"></label> <!-- Tied -->
+                <label class="cell-items" id="content0"></label> <!-- Unit Sub data-->
+                <label class="cell-items" id="content1"></label> <!-- PDS data -->
+                <label class="cell-items" id="content2"></label> <!-- Alt/3rd data -->
+                <label class="cell-items" id="content3"></label> <!-- Tied data -->
+            </div>
+        </section>
+        <section>
+            <div class="grid-container-substations">
+                <div class="grid-substation-units" id="station1_position">
+                    <label class="unit_Title" id="GridHeader6"></label>
+                </div>
+
+                <div class="grid-substation-units" id="station2_position">
+                    <label class="unit_Title" id="GridHeader7"></label>
+                </div>
+            </div>
+        </section>
+        <section></section>
+    </div>        
+</body>
+</html>

@@ -1,0 +1,45 @@
+body {
+    display:grid;    
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    'titlePage'
+    'mainBody';
+    grid-gap: 2px;
+    margin: 5%;
+}
+
+body > header {
+    display:grid;
+    grid-area:titlePage;
+    background-color: blue;
+    text-align: center;
+    font-size: 40px;
+    color: white;
+    padding: 10px;
+    border: 2px solid black;
+}
+
+.mainData {  
+    display:grid;
+    grid-area: mainBody;
+    grid-template-columns: repeat(11, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+        'head head head head head head head head head head head'
+        'feed feed feed feed feed feed feed feed feed feed feed';
+    border: 2px solid yellow;
+    background-color:blue;
+    color: white;
+}
+
+#headerRow {
+    grid-area:head;
+}
+
+#dataRow {
+    grid-area:feed;
+}
+
+
+

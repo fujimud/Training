@@ -1,0 +1,121 @@
+body {
+  background-color: white;
+}
+
+.grid-wrapper {
+  display: grid;
+  grid-template-columns: 250px, 400px;
+  grid-template-rows: auto;
+  grid-template-areas:
+    'vaults units';
+  grid-gap: 40px;
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-right: 20px;
+  border: 0px solid blue;
+}
+
+.grid-container-vaults {
+  display: grid;
+  grid-area: vaults;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas:
+    'vaultMainTitle vaultMainTitle vaultMainTitle vaultMainTitle'
+    'vaultTitle1 vaultTitle2 vaultTitle3 vaultTitle4'
+    'vaultTopic1 vaultTopic2 vaultTopic3 vaultTopic4';
+  grid-gap: 2px;
+}
+
+.grid-container-nested-units {
+  display: grid;
+  grid-area: units;
+  grid-template-columns: 1;
+  grid-template-rows: auto;
+  grid-template-areas:
+    'station1'
+    'station2';
+  grid-row-gap: 40px;
+}
+
+.grid-container-units {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas:
+    'titleUnit titleUnit titleUnit titleUnit titleUnit titleUnit'
+    'unitTopic unitTopic unitTopic unitTopic unitTopic unitTopic';
+  grid-gap: 2px;
+}
+
+.mainTitle {
+  display: grid;
+  grid-area: vaultMainTitle;
+  background-color: blue;
+  color: white;
+  font-size: 24px;
+  text-align: center;
+}
+
+.unit_Title {
+display: grid;
+
+  background-color: yellow;
+  color: black;
+  font-size: 24px;
+  text-align: center;
+}
+
+#subTitlePos {
+  grid-area: titleUnit;
+}
+
+#subTitlePos2 {
+  grid-area: titleUnit;
+}
+
+#station1_pos {
+  grid-area: station1;
+}
+
+#station2_pos {
+  grid-area: station2;
+}
+
+.cell-items {
+  background-color: skyblue;
+  color: black;
+  text-align: center;
+  border: 2px solid orange;
+}
+
+#unitTitle1 {
+    grid-area: titleUnit;
+}
+#unitTitle2 {
+    grid-area: titleUnit;
+}
+#subMenu1 {
+  grid-area: vaultTitle1;
+  background-color: grey;
+  color: blue;
+  border 2px solid gold;
+}
+#subMenu2 {
+  grid-area: vaultTitle2;
+  background-color: white;
+  color: black;
+  border 2px solid gold;
+}
+#subMenu3 {
+  grid-area: vaultTitle3;
+  background-color: orange;
+  color: white;
+  border 2px solid gold;
+}
+#subMenu4 {
+  grid-area: vaultTitle4;
+  background-color: skyblue;
+  color: red;
+  border 2px solid gold;
+}

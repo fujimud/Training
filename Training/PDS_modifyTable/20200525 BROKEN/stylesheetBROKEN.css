@@ -1,0 +1,74 @@
+
+.grid-container-12grids {
+    display: grid;
+   grid-template-columns: repeat(12, 1fr);
+   
+    grid-template-rows: auto;    
+    grid-template-areas:        
+        'gridUnit gridType gridTable gridPrimary gridSecondary gridTied gridLatched gridActivityStatus gridCreationDate gridUserId gridEdit gridDelete';
+    grid-gap: 5px;
+    margin-left: 60px;
+    margin-top: 10px;
+    border: 2px solid blue;    
+}
+
+.grid-cell {
+    background-color: lightgrey;
+    color: black;
+    text-align: center;
+    padding: 5px;
+    white-space: nowrap;
+    margin: 2px;
+}
+
+#headerRow {
+    grid-area:gridHeader;
+}
+
+#deleteRow {
+    grid-area:gridDelete;
+}
+
+#editRow {
+    grid-area:gridEdit;
+}
+#unitRow {
+    grid-area:gridUnit;
+}
+
+#typeRow {
+    grid-area:gridType;
+}
+
+#tableRow {
+    grid-area:gridTable;
+}
+
+#primaryRow {
+    grid-area:gridPrimary;
+}
+
+#secondaryRow {
+    grid-area:gridSecondary;
+}
+
+#tiedRow {
+    grid-area:gridTied;
+}
+
+#latchedRow {
+    grid-area:gridLatched;
+}
+
+#activityStatusRow {
+    grid-area:gridActivityStatus;
+}
+
+#creationDateRow {
+    grid-area:gridCreationDate;
+}
+#useridRow {
+    grid-area:gridUserId;
+}
+
+

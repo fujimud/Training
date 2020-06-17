@@ -1,0 +1,43 @@
+div {
+    display: block;
+}
+.parent {
+    background-color: blueviolet;
+    position: relative;
+    font-size: 24px;
+    padding: 5px;
+    font-weight: bold;
+    width: 400px;
+    height: 200vh;
+}
+
+.child {
+    padding: 5px;
+    padding-left: 4px;
+    margin: 4px;
+
+}
+
+.child-one {
+    background-color: burlywood;
+    position: relative;
+    top: 20px;
+}
+
+.child-two {
+    background-color: rosybrown;
+    position: absolute;
+    top: 0px;
+}
+
+.child-three {
+    background-color: bisque;
+    position: fixed;
+    top: 0
+}
+
+.child-four {
+    background-color: yellowgreen;
+    position: sticky;
+    top: 0
+}

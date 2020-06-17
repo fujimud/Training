@@ -1,0 +1,67 @@
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas:
+    '. header header header .'
+    '. main1 main2 main3 .'
+    '. topic0 topic1 topic2 .';
+  margin-top: 60px;
+  background-color: white;
+  color: white;
+  column-gap: 1px solid rgba(255, 165, 0, 1);
+  row-gap: 1px solid rgba(255, 165, 0, 1);
+}
+
+.grid-item {
+  border: 1px solid rgba(255, 165, 0, 1);
+  text-align: center;
+  background-color: blue;
+}
+
+.grid-cell {
+  border: 1px solid rgba(255, 165, 0, 1);
+  text-align: center;
+  color: black;
+  background-color: white;
+}
+
+.border {
+  border: 1px solid rgba(255, 165, 0, 1);
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 10%;
+  text-align: center;
+  color: black;
+  background-color: white;
+}
+
+#GridHeader0 {
+    grid-area: header;
+}
+
+#GridHeader1 {
+    grid-area: main1;
+}
+
+#GridHeader2 {
+    grid-area: main2;
+}
+
+#GridHeader3 {
+    grid-area: main3;
+}
+
+#content0 {
+    grid-area: topic0;
+}
+
+#content1 {
+    grid-area: topic1;
+}
+
+#content2 {
+    grid-area: topic2;
+}

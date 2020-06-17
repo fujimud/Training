@@ -1,0 +1,127 @@
+[{
+        "How to remove empty lines": {
+            "Description": "keys used to remove lines",
+            "keys": "^\\s)*$\\n",
+            "link": "https://www.trainingdragon.co.uk/blog/how-to-remove-empty-lines-in-visual-studio-code"
+        }
+    },
+    {
+        "node.js activate live-server": {
+            "Description": "How to use a server without installing Tomcat",
+            "link": "https://www.youtube.com/watch?v=wI1CWzNtE-M"
+        }
+    },
+    {
+        "Grid layout tips": {
+            "Description": "CSS tips and hints",
+            "link": "https://css-tricks.com/things-ive-learned-css-grid-layout/"
+        }
+    },
+    {
+        "npm commands": {
+            "npm init -y": {
+                "Description": "initialize branch and add package.json",
+                "package.json": {
+                    "Description": "Required: Used for defining project properties, description, author & licenser information, scripts, etc",
+                    "script: \"start\":\"node server.js\"": "needed for PROD ENV",
+                    "script: \"devStart\":\"nodemon server.js\"": "needed for DEV ENV:"
+                }
+            },
+            "npm i express ejs": {
+                "Description": "install server and html template",
+                "package-lock.json":"Created file: Used solely to lock dependencies to a specific version number",
+                "node_modules":"Create file: filled with modules for use",
+                "server.js": {
+                    "const express = requires('express')": "Pulls in the server functions",
+                    "const app = express()": "Pulls in the window application from express",
+                    "app.set(\"view engine\",\" ejs\")": "enable the ability to see the HTML template ejs",
+                    "app.set(\"views\", __dirname + \"/views\")": "Points to the views folder by using __dirname (points to the current working folder)",
+                    "app.listen(process.env.PORT || 3000)": "Listening if the PORT is in PROD, OR declare the local PORT as 3000 for production"
+                }
+            },
+            "npm i --save-dev nodemon dotenv": {
+                "Description": "install save in dev env and that it will restart the server when changes are made",
+                "filename: .env": "save secrete files that are not to be viewed by the pulic",
+                "filename: .gitignore": "enclude all files not to be passed to the Git repository"
+            },
+            "npm run server.js": "run the server file",
+            "localhost:3000": "Should see Cannot GET / - as long as it is not pointing to a file",
+            
+        }
+    },
+    {
+        "How to get the client to communicate with the server": {
+            "Description": "Use GET to receive a response from the server",
+            "app.get('/', (req, res) => {\n\tres.send(\"Hello World\" }": {
+                "app": "variable name used topull in the module express()",
+                "//": "identifies the current HOME directory path",
+                "req": "HTTP request - request sent to the server",
+                "res": "HTTP response - what it sends back from the server",
+                "res.send": "HTTP response that it sends when it gets an HTTP request"
+            }
+        }
+    },
+    {
+        "Passport: used for password authentication": {
+            "Description": "Installs modules used for authentication",
+            "npm i passport passport-local express-session express-flash": {
+                "passport": "Athenicate middleware that authenticate each request",
+                "passport-local": "Using with Passport, the local authetication can be done easily",
+                "express-session": "Create a unique session for each user and store their current state",
+                "express-flash": "A way to define a flash message with redirecting the request"
+            }
+        }
+    },
+    {
+        "method-override": {
+            "Description": "Lets you use HTTP verbs such as PUT or DELETE in places where the client doesn't support it",
+            "npm i @types/method-override": "Installation commmand",
+            "@type": "Used when there is an installation issue, otherwise it is optional"
+        }
+    },
+    {
+        "VS Code can do that": {
+            "Description": "All the best things about VS Code that nobody ever bothered to tell you",
+            "link": "https://www.vscodecandothat.com/"
+        }
+    },
+    {
+        "Git": "Allows multiple developers to work on the master",
+        "Some basic commands used with Git": {
+            "git init": "Initialize",
+            "git clone ssh_url": "Cloning",
+            "git add": "Add to a working directory/folder",
+            "git commit": "Index/Staging - Save to remote repository",
+            "git push": "Head - Save the offical version to repository",
+            "git check name_of_branch": "Enable the developer to switch to the new branch",
+            "git checkout -b name_of_branch": "Altnernate way to creates a new branch and switch the dev to the new branch",
+            "git merge name_of_branch": "Merge code back to the Master - any conflict will notify the user before it commits"
+        },
+        "link": "https://www.youtube.com/watch?v=IHaTbJPdB-s"
+    },
+    {
+        "EJS document": {
+            "Description": "Information on EJS (Embedded JavaScript",
+            "link": "https://ejs.co/#install"
+        }
+    },
+    {
+        "synchronous": {
+            "Description": "Will not run the next line of code to run until the current line has completed. JavaScript by default runs on sychronous and it is single-threaded"
+
+        }
+    },
+    {
+        "asynchoronous": {
+            "Description": "Next line of code will start before the current line of code has finished.\n Also Try and Catch function can be used in this condition",
+            "RISK": "It could make the program run faster, but it runs the risk that it might have performance issues"
+        }
+    },
+    {
+        "TEMPLATE": {
+            "Description": "",
+            "cmd": ""
+        }
+    }
+
+]

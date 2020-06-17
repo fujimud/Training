@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Load JSON</title>
+</head>
+<body>
+    <h1>Hello</h1>
+    <ul id='people'></ul>
+</body>
+<script>
+    var people = [
+        {
+            name:'Tim',
+            age: 33
+        },
+        {
+            name:'Sally',
+            age: 55
+        },
+        {
+            name:'Steve',
+            age: 15
+        }
+    ]
+    
+    var xhttp = new XMLHttpRequest();
+    var people = ''
+    xhttp.onreadystatechange = function () {
+        if(this.readyState == 4 && this.status == 200) {
+            var response = JSON.parse(xhttp.responseText)
+            //console.log(response.people)
+            people = response.people
+            //people.push(response.people)
+
+           // console.log(response)
+           // console.log(response.people)   
+           // console.log(people)
+           // var output = ''
+           // for (var i=0; i < people.length; i++) {
+           // //    console.log(people[i].name)
+           //     output += '<li>'+ people[i].name +'</li>'
+           // }
+           // document.getElementById('people').innerHTML = output
+           doStuff()
+        }
+        
+    }
+    xhttp.open("GET", "people.json", true) 
+    xhttp.send()
+   
+   
+    
+    function doStuff() {
+        //console.log(people)
+        console.log('length> ' + people.length)
+        for(var i = 0; i < people.length; i++) {
+            console.log(i +' > ')
+            console.log(people[i])
+            console.log(people[i].name)
+        }
+    }
+
+</script>
+
+</html>

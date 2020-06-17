@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='Model/Config.css' rel='stylesheet' type='text/css' media='all'>
+    </link>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src='https://code.jquery.com/jquery-3.3.1.slim.min.js'
+        integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo' crossorigin='anonymous'>
+    </script>
+    <!-- <script src='Model/dataSource.json'></script> -->
+    <script src='Controller/main.js'></script>
+    <title>Login page</title>
+</head>
+
+<body>
+    <header></header>
+    <form class='container' action="/action_page.php">
+        <div>
+            <input type='text' id='userName' placeholder='enter user id' required></input>
+        </div>
+        <div>
+            <input type='password' id='password' placeholder='enter password' required></input>
+        </div>
+        <div>
+            <button type='submit' id='loginButton' onclick='SaveData()'>Login</button>
+        </div>
+        <div>
+            <p id='message'></p>
+        </div>
+    </form>
+</body>
+
+</html>

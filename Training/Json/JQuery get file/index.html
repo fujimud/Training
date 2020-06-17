@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='https://code.jquery.com/jquery-latest.min.js'></script>
+    <script src='main.js'></script>
+    <title>Get JSON file using JQuery</title>
+</head>
+<body>
+    
+</body>
+<script>
+    
+    //var result = ''
+    //var people = []
+    var people = []
+    //var people = ''
+ 
+    $.getJSON('people.json', function(result) {
+    // $.getJSON('people.js', function(result) {  // This .js version appears to work too
+        //console.log(result.people)
+        //console.log((result.people).length)
+        for (var i = 0; i < (result.people).length; i++) {
+            //people[i] = result.people[i]
+            //people[i] = result.people[i].name
+            //console.log(result[i])
+            people.push(result.people[i])
+        }
+
+        //array.push(result)  // Not the best action: array is to deep
+        //console.log(result)
+        //console.log(result.people)
+        //people.push(result.people)
+        //people = (result.people)  // don't work
+        //console.log(result.people[1].name)  // return's a name
+        console.log('INSIDE > ' + people.length)
+        console.log(people)
+
+        doSOMETHING()
+    })
+
+    function doSOMETHING () {
+        console.log('RESULTS')
+        console.log(people)
+        console.log('length> ' + people.length)
+        for (var x = 0; x < people.length; x++) {
+            console.log(x +'> ')
+            console.log(people[x])
+            console.log(people[x].name)
+        }
+    }
+
+</script>
+</html>

@@ -1,0 +1,199 @@
+body {
+  background-color: white;
+}
+
+.grid-wrapper {
+  display: grid;
+  grid-template-columns: 250px, 400px;
+  grid-template-rows: auto;
+  grid-template-areas:
+    'vaults units';
+  grid-gap: 40px;
+  margin-left: 20px;
+  margin-top: 10px;
+  margin-right: 20px;
+  border: 0px solid blue;
+}
+
+.grid-container-vaults {
+  display: grid;
+  grid-area: vaults;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas:
+    'vaultMainTitle vaultMainTitle vaultMainTitle vaultMainTitle'
+    'vaultTitle1 vaultTitle2 vaultTitle3 vaultTitle4'
+    'vaultTopic1 vaultTopic2 vaultTopic3 vaultTopic4';
+  grid-gap: 3px;
+}
+
+.grid-container-nested-units {
+  display: grid;
+  grid-area: units;
+  grid-template-columns: 1;
+  grid-template-rows: auto;
+  grid-template-areas:
+    'station1'
+    'station2';
+  grid-row-gap: 40px;
+}
+
+.grid-container-units {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas:
+    'titleUnit titleUnit titleUnit titleUnit titleUnit titleUnit'
+    'unitTopic unitTopic unitTopic unitTopic unitTopic unitTopic';
+  grid-gap: 2px;
+}
+
+.backgroundColorSkyblue {
+  background-color: Skyblue;
+}
+
+.border {
+  backgroud-color: white;
+  color: black;
+  text-align: center;
+  border: 1px solid BLUE;
+  margin: 2px;
+  white-space:nowrap;
+}
+
+.border-tied {
+  backgroud-color: white;
+  color: black;
+  text-align: center;
+  border: 1px solid BLUE;
+  margin: 2px;
+}
+
+.border:hover {
+  background-color: yellow;
+  cursor: pointer;
+}
+
+.borderHeader {
+  backgroud-color: blue;
+  color: white;
+  text-align: center;
+  border: 1px solid BLUE;
+  margin: 2px;
+}
+
+
+.cell-items {
+  background-color: white;
+  color: black;
+  text-align: center;
+  border: 0px solid orange;
+  font-size: 14px;
+}
+
+.image-centered {
+  display: block;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 50%;
+  width: 50%
+}
+
+.mainTitle {
+  display: grid;
+  background-color: blue;
+  color: white;
+  font-size: 24px;
+  text-align: center;
+  border 2px solid yellow;
+}
+
+.unit_Title {
+display: grid;
+  background-color: yellow;
+  color: black;
+  font-size: 24px;
+  text-align: center;
+}
+
+div button {
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+#content0 {
+  grid-area:vaultTopic1;
+}
+
+#content1 {
+  grid-area:vaultTopic2;
+}
+
+#content2 {
+  grid-area:vaultTopic3;
+}
+
+#content3 {
+  grid-area:vaultTopic4;
+}
+
+#GridHeader0 {  /* banner */
+  border: 0px solid yellow;
+}
+
+#GridHeader1 { /* position for webpage title */
+  background-color: white;
+  color: black;
+  font-size: 48px;
+  text-align: center;
+  border 0px solid red;
+}
+
+#GridHeader2 {  /* Unit Sub */
+  grid-area: vaultTitle1;
+  background-color: blue;
+  color: white;
+  border 0px solid blue;
+}
+
+#GridHeader3 { /* PDS */
+  grid-area: vaultTitle2;
+  background-color: blue;
+  color: white;
+  border 0px solid blue;
+}
+
+#GridHeader4 { /* Alt/3rd */
+  grid-area: vaultTitle3;
+  background-color: blue;
+  color: white;
+  border 0px solid blue;
+}
+
+#GridHeader5 {  /* Tied */
+  grid-area: vaultTitle4;
+  background-color: blue;
+  color: white;
+  border: 1px solid blue;
+}
+
+#GridHeader6 { /* Substation 1 */
+  grid-area: titleUnit;
+  border: 1px solid blue;
+}
+
+#GridHeader7 { /* Substation 2 */
+  grid-area: titleUnit;
+  border: 1px solid blue;
+}
+
+#station1_position {  /* Grid location for substation 1 */
+  grid-area: station1;
+  font-size: 14px;
+}
+
+#station2_position {  /* Grid location for substation 2 */
+  grid-area: station2;
+  font-size: 14px;
+}

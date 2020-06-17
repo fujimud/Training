@@ -1,0 +1,348 @@
+/*
+  Tags
+*/
+
+body {
+  background-color: white;
+}
+
+button {
+  margin-top: 10px;
+}
+
+button:hover {
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+H1 {
+  text-align: center;
+}
+
+/*
+  Grids
+*/
+
+.grid-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas:
+    'vaults units';
+  grid-gap: 40px;
+  margin-left: 60px;
+  margin-top: 10px;
+  border: 0px solid blue;
+}
+
+.grid-container-vaults {
+  display: grid;
+  grid-area: vaults;
+  /* grid-template-columns: repeat(4, 1fr); */
+  grid-template-columns: repeat(1fr, 1fr, 1fr, 40px);
+  grid-template-rows: auto;
+  grid-template-areas:
+    'vaultMainTitle vaultMainTitle vaultMainTitle vaultMainTitle'
+    'vaultTitle1 vaultTitle2 vaultTitle3 vaultTitle4'
+    'vaultTopic1 vaultTopic2 vaultTopic3 vaultTopic4';
+    grid-gap: 2px;
+}
+
+.grid-container-substations {
+  display: grid;
+  grid-area: units;
+  grid-template-columns: auto-fit;
+  grid-template-rows: auto;
+  grid-template-areas:
+    'station1'
+    'station2';
+   position: fixed;
+}
+
+.grid-substation-units {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas:
+    'titleUnit titleUnit titleUnit titleUnit titleUnit titleUnit'
+    'unitTopic unitTopic unitTopic unitTopic unitTopic unitTopic';
+    grid-gap: 2px;
+}
+
+/*
+  Cells 
+*/
+
+.border {
+  background-color: white;
+  color: black;
+  text-align: center;
+  border: 1px solid BLUE;
+  margin: 2px;
+  white-space:nowrap;
+  padding: 5px;
+}
+
+.border-tied {
+  text-align: center;
+  border: 1px solid BLUE;
+  margin: 2px;
+  padding: 5px;
+  max-width: 40px;
+}
+
+.border:hover {
+  background-color: lightgrey;
+  color: black;
+  cursor: pointer;
+}
+
+.borderHeader {
+  text-align: center;
+  border: 1px solid BLUE;
+  margin: 2px;
+}
+
+.cell-items {
+  text-align: center;
+  border: 0px solid orange;
+  font-size: 14px;
+}
+
+/*
+  Titles, logo, and sub title
+*/
+
+.image-centered {
+  display: block;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 50%;
+  width: 50%
+}
+
+.mainTitle {
+  display: grid;
+  background-color: blue;
+  color: white;
+  font-size: 24px;
+  text-align: center;
+  padding: 5px;
+  border: 0px solid yellow;
+  position: sticky;
+  top: 0;  
+}
+
+
+.tiedTitle {
+  max-width: 45px;
+}
+
+/*
+  Modal
+*/
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+ background-color: rgb(0, 0, 0);
+ background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #8fc5e4;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 15%;
+  height: 55%;
+  overflow-y: auto;
+}
+
+.unit_Title {
+  display: grid;
+  background-color: blue;
+  color: white;
+  font-size: 24px;
+  text-align: center;
+  padding: 5px;
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/*
+  Positions and formats
+*/
+
+#content0 {
+  grid-area:vaultTopic1;
+}
+
+#content1 {
+  grid-area:vaultTopic2;
+}
+
+#content2 {
+  grid-area:vaultTopic3;
+}
+
+#content3 {
+  grid-area:vaultTopic4;
+}
+
+#feedName {
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+#GridHeader0 {  /* banner */
+  border: 0px solid yellow;
+}
+
+#GridHeader1 { /* webpage title */
+  font-size: 48px;
+  text-align: center;
+  border: 0px solid red;
+}
+
+#GridHeader2 {  /* Unit Sub */
+  grid-area: vaultTitle1;
+  border: 0px solid yellow;
+}
+
+#GridHeader3 { /* PDS */
+  grid-area: vaultTitle2;
+  border: 0px solid yellow;
+}
+
+#GridHeader4 { /* Alt/3rd */
+  grid-area: vaultTitle3;
+  border: 0px solid yellow;
+}
+
+#GridHeader5 {  /* Tied */
+  grid-area: vaultTitle4;
+  border: 0px solid yellow;
+}
+
+#GridHeader6 { /* Substation 1 */
+  grid-area: titleUnit;
+  border: 0px solid yellow;
+}
+
+#GridHeader7 { /* Substation 2 */
+  grid-area: titleUnit;
+  border: 0px solid yellow;
+}
+
+#primaryUnit {
+  text-overflow: 75ch;
+  margin-bottom: 5px;
+}
+
+#refresh {
+  margin-left: 60px;
+}
+
+
+#secondaryUnit {
+  text-overflow: 75ch;
+}
+
+#station1_position {  /* Grid location for substation 1 */
+  grid-area: station1;
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+#station2_position {  /* Grid location for substation 2 */
+  grid-area: station2;
+  font-size: 14px;
+}
+#statusOptions {
+  margin-top: 10px;
+}
+
+#tableOptions {
+  margin-top: 10px;
+}
+
+#typeOptions {
+  margin-top: 10px;
+}
+
+#unitLabelName {
+    text-overflow: 75ch;  
+}
+
+#unit_tied {
+  margin-top: 10px;  
+}
+
+#vaultOptions {
+  margin-top: 10px;
+}
+
+/*
+  Navigation bar
+*/
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(80, 117, 197)
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: rgb(70, 16, 207);
+  cursor: pointer;
+}
+
+/*
+  Color definition
+*/
+.colorTiedisTrue {
+  background-color: Skyblue;
+}
+
+.deactivated-cell {
+  background-color: red;
+  color: white;
+}
+
+.identified-cell {
+  background-color: yellow;
+  color: black;
+}
