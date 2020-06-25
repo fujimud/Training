@@ -40,5 +40,7 @@
     "git merge feature_a":"Copy the branch back to the master and it will identify any difference that may be found" 
     }],
     "git add . ":"dot means all all the files",
-    "git diff":"tells what has changed"
+    "git diff":"tells what has changed",
+    ": (colon)":"enter q for quit",
+    "git commit -m /'add commment here/'":"commits the file to the remote repository"
 }]
