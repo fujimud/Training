@@ -38,5 +38,7 @@
     "git checkout feature_a":"Used to switch to the different branch",
     "git checkout -b feature_a":"This will create a new branch and switch the developer to that branch",
     "git merge feature_a":"Copy the branch back to the master and it will identify any difference that may be found" 
-    }]
+    }],
+    "git add . ":"dot means all all the files",
+    "git diff":"tells what has changed"
 }]
