@@ -24,7 +24,7 @@
             "GitHub": [{
                 "Purpose": "local repository found in GitHub",
                 "cmd": "git push",
-                "git clonse": "Git will already know where to push the files to",
+                "git clone": "Git will already know where to push the files to",
                 "git init": [{
                     "Description": "Git will need to be told where to push the files to",
                     "cmd": "git remote add origin ssh_url"
@@ -42,5 +42,15 @@
     "git add . ":"dot means all all the files",
     "git diff":"tells what has changed",
     ": (colon)":"enter q for quit",
-    "git commit -m /'add commment here/'":"commits the file to the remote repository"
+    "git commit -m /'add commment here/'":"commits the file to the local repository",
+    "Setup with existing files":[{
+        "git init":"Setup the local repository",
+        "gitignore":"add all files that are not to be pushed into the remote repository",
+        "git add .":"add all files to the local repository",
+        "git commit -m /'<enter comment here>/'":"add all files to our current project",
+        "gitHub":"Open website and copy the commands found under /'...or push an existing repository from the command line/'"
+    }]
+}],
+"link: Project setup":"https://www.youtube.com/watch?v=qj2oDkvc4dQ&t=1212s",
+"link: Learn Git in 20 minutes":"https://www.youtube.com/watch?v=IHaTbJPdB-s&t=539s"
 }]
